@@ -1,5 +1,5 @@
 {
-    "same_toml_configuration": true,
+    "same_toml_configuration": false,
     "topology_file": "waku_test_topology_small.json",
     "simulation_time": 60,
     "message_rate": 10,
