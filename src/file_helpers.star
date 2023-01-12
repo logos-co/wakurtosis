@@ -1,7 +1,7 @@
 # System Imports
 system_variables = import_module("github.com/logos-co/wakurtosis/src/system_variables.star")
 
-def get_toml_configuration_artifact(wakunode_name, same_toml_configuration):
+def get_toml_configuration_artifact(node_name, same_toml_configuration):
     if same_toml_configuration:
         artifact_id = upload_files(
             src=system_variables.GENERAL_TOML_CONFIGURATION_PATH
@@ -9,9 +9,9 @@ def get_toml_configuration_artifact(wakunode_name, same_toml_configuration):
         file_name = system_variables.GENERAL_TOML_CONFIGURATION_NAME
     else:
         artifact_id = upload_files(
-            src="github.com/logos-co/wakurtosis/config/waku_config_files/" + wakunode_name + ".toml"
+            src="github.com/logos-co/wakurtosis/config/node_config_files/" + node_name + ".toml"
         )
-        file_name = wakunode_name + ".toml"
+        file_name = node_name + ".toml"
 
     return artifact_id, file_name
 
